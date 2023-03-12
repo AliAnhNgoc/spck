@@ -1,0 +1,353 @@
+:root {
+  --lightyellow: #fffcf2;
+  --yellow: #e3caa5;
+  --brown: #ceab93;
+  --deepbrown: #ad8b73;
+  --winered: #a75d5d;
+  --softred: #d3756b;
+  --softorange: #f0997d;
+  --vani: #ffc3a1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto mono", monospace;
+  font-size: 16px;
+  background-color: var(--lightyellow);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  background-color: var(--lightyellow);
+  z-index: 1000;
+}
+.nav__title {
+  font-family: "Architects Daughter", cursive;
+  font-size: 24px;
+  padding: 10px;
+  margin: 10px;
+}
+.title__W {
+  color: rgb(119, 19, 19);
+}
+.title__M {
+  color: rgb(148, 100, 55);
+}
+.title__N {
+  color: #632310;
+}
+.nav__choice {
+  display: flex;
+  padding: 10px;
+  margin: 0px 25px;
+  flex-direction: none;
+  justify-content: flex-end;
+}
+
+.selected {
+  background-color: rgb(253, 234, 224);
+  color: var(--winered);
+  border-radius: 10px;
+  font-family: "Itim", cursive;
+}
+
+.nav__link {
+  height: 100%;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 20px;
+  margin-right: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+
+  font-family: "Itim", cursive;
+}
+
+.nav__link::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 4px;
+  left: 0;
+  bottom: 0px;
+  border-radius: 10px;
+  background-color: var(--winered);
+  transform-origin: center;
+  transition: all 0.3s ease-in;
+  font-family: "Itim", cursive;
+}
+
+.nav__link:hover::before {
+  width: 100%;
+}
+
+.title {
+  width: 100%;
+  padding-top: 74px;
+}
+.title__women {
+  color: #000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 120px;
+  letter-spacing: 3px;
+  font-weight: 200;
+}
+.title__dot {
+  background-color: var(--lightyellow);
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  margin-top: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: #000 2px solid;
+}
+.title__dash {
+  background-color: var(--winered);
+  height: 6px;
+  width: 90%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.title__infor {
+  display: flex;
+  margin: 20px;
+  padding: 10px;
+
+  height: 400px;
+  margin-top: 100px;
+  justify-content: center;
+  text-align: center;
+}
+.title__inPower {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 50px;
+  margin: 10px 450px;
+}
+.title__in {
+  font-family: "Pacifico", cursive;
+  margin-right: 50px;
+  color: rgb(126, 43, 43);
+}
+.title__power {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 60px;
+}
+.title__img {
+  height: 250px;
+  width: 350px;
+  margin: 10px 40px;
+}
+.title__p {
+  letter-spacing: 3px;
+  font-family: "Itim", cursive;
+  color: rgb(124, 53, 35);
+}
+.extra-img {
+  display: flex;
+  justify-content: center;
+}
+.extra__img {
+  width: 420px;
+  height: 550px;
+  position: relative;
+}
+.img1 {
+  width: 230px;
+  height: 300px;
+}
+.img2 {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.extra__p {
+  font-family: "Itim", cursive;
+  font-size: 45px;
+  color: #5e2d1e;
+}
+
+.About__background,
+.about__objective {
+  display: flex;
+  margin-top: 20px;
+}
+.about__background-p,
+.about__objective-p,
+.about__participation {
+  margin: 30px;
+  width: 900px;
+}
+.about__background-p-title,
+.about__objective-p-title,
+.about__participation-title,
+.more-title {
+  font-size: 40px;
+  font-family: "Lilita One", cursive;
+  color: var(--winered);
+}
+.about__background-p-about,
+.about__objective-p-about,
+.about__participation-p {
+  font-size: 20px;
+  width: 800px;
+  margin: 20px;
+  font-family: cursive;
+}
+.about__background-img,
+.about__objective-img {
+  width: 300px;
+  margin: 20px 10px;
+}
+.more__Marie,
+.more__Ada,
+.more__Amelia {
+  display: flex;
+}
+.more__Marie-title,
+.more__Ada-title,
+.more__Amelia-title {
+  font-family: "Mochiy Pop One", sans-serif;
+  font-size: 25px;
+  color: var(--deepbrown);
+}
+.more__Marie-about,
+.more__Ada-p1,
+.more__Amelia-p {
+  font-size: 32px;
+  margin: 40px;
+  width: 700px;
+  font-family: "Ubuntu Condensed", sans-serif;
+  letter-spacing: 1px;
+}
+.Ada-name {
+  color: red;
+  text-decoration: underline;
+}
+.more__Marie-img {
+  width: 400px;
+  height: 600px;
+  margin: 20px 20px;
+}
+.more__Ada-img {
+  height: 580px;
+  margin: 20px;
+}
+.more__Amelia {
+  height: 600px;
+  margin: 20px;
+}
+.contact {
+  width: 100%;
+  height: 600px;
+  margin-top: 250px;
+}
+.contact__title {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Lilita One", cursive;
+  margin: 60px 0px;
+  color: rgb(170, 56, 56);
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+#contact__name,
+#contact__email {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 4px 10px;
+  width: 800px;
+  border: 2px solid rgb(0, 0, 0);
+  font-family: cursive;
+  height: 60px;
+  font-size: 38px;
+  font-style: #a75d5d;
+}
+button {
+  width: 100px;
+  background-color: var(--softred);
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  font-family: "Lilita One", cursive;
+  height: 60px;
+  font-size: 22px;
+  margin-top: 20px;
+  border: #d3756b;
+  cursor: pointer;
+}
+
+.contact__link {
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
+}
+.link1 {
+  font-family: cursive;
+  font-size: 30px;
+}
+.link2 {
+  font-family: cursive;
+  font-size: 30px;
+  color: red;
+  font-style: italic;
+  text-decoration: underline;
+}
+.contact__about {
+  font-size: 30px;
+  color: #000;
+  font-family: cursive;
+}
+
+.attention {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+#onTop {
+  padding: 20px;
+  border-radius: 50px;
+  background-color: rgb(173, 49, 49);
+  color: #fff;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100000;
+  font-family: "Itim", cursive;
+}
+
+#onTop:hover {
+  cursor: pointer;
+}
